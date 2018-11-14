@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#605CA8</color>
+    <color name="topbar">#fcfbfb</color>
+    <!--7f7cb9-->
+    <color name="colorPrimaryDark">#434075</color>
+    <color name="colorAccent">#2aac7c</color>
+    <color name="navbarcolor">#333</color>
+    <color name="textBlackDark">#4c4c4c</color>
+    <color name="textBlackLight">#999999</color>
+    <color name="shreycolor">#2aac7c</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_light">#EBEBEB</color>
+
+
+    <color name="red">#ff1919</color>
+    <color name="green">#00ff00</color>
+    <color name="orange">#f57722</color>
+    <color name="gray_dark">#393939</color>
+    <color name="black">#000</color>
+    <color name="gray">#939393</color>
+    <color name="gray_light">#FF979595</color>
+    <color name="graye">#F87D6C98</color>
+    <color name="white_trans">#99FFFFFF</color>
+    <color name="textchange">#4dcbac</color>
+
+    <color name="sender">#b25800</color>
+    <color name="receiver">#000000</color>
+
+
+    <color name="chat_1">#ffa500</color>
+    <color name="chat_2">#088da5</color>
+    <color name="chat_3">#003366</color>
+    <color name="chat_4">#ab2100</color>
+    <color name="chat_5">#20b2aa</color>
+    <color name="chat_6">#008000</color>
+
+    <color name="color_1">#00C2DB</color>
+    <color name="color_2">#01D48F</color>
+    <color name="color_3">#028985</color>
+    <color name="color_4">#F3C300</color>
+    <color name="color_5">#DE6E02</color>
+
+    <color name="color_6">#ba0404</color>
+    <color name="color_7">#7e3030</color>
+    <color name="color_8">#d8a646</color>
+    <color name="color_9">#073033</color>
+    <color name="color_10">#0d0101</color>
+
+
+</resources>

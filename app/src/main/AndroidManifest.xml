@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.exalogic.transmegh">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.exalogic.inmegh.transmeghapp.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <permission
+        android:name="com.exalogic.transmegh.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="DATABASE"
+            android:value="inMegh.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.exalogic.transmegh.Models.database" />
+
+        <activity
+            android:name=".Activities.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SecondActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBcfoQuXx_PpjWCwEcKjePptPnp38d2vW0" />
+
+        <activity
+            android:name=".Activities.TripActivity"
+            android:label="@string/title_activity_trip"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.StopLocationActivity"
+            android:label="@string/title_activity_stop_location"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ProfileActivity"
+            android:label="     "
+            android:parentActivityName=".Activities.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.exalogic.transmegh.Activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.BusActivity"
+            android:label="@string/bus_activity" />
+
+        <service
+            android:name=".MapUtility.LatLongUpdateService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".Activities.StudentStopActivity" />
+        <activity android:name=".Activities.StudentDetailsActivity" />
+        <activity
+            android:name=".Activities.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ParentListActivity"
+            android:label="@string/contact_parent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.StopListActivity"
+            android:label="@string/title_activity_stop_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.StudentListActivity"
+            android:label="@string/stud_list" />
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name=".Activities.ProfileFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.HomeFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ParentListFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.BusFragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.HomeTabActivity"
+            android:label="@string/title_activity_home_tab"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activities.PickupFragment" />
+        <activity android:name=".Activities.DropFragment" />
+    </application>
+
+</manifest>

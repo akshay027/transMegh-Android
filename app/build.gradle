@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android { signingConfigs {
+        config {
+            keyAlias 'Key2'
+            keyPassword 'exa10sept'
+            storeFile file('C:/Users/Exalogic/Desktop/Transmegh/inmegh-local.jks')
+            storePassword 'exa10sept'
+        }
+    }
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.exalogic.transmegh"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 18
+        versionName "1.1.5"
+        multiDexEnabled true
+        signingConfig signingConfigs.config
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+    }
+}
+
+repositories {
+    maven {
+        url "https://mint.splunk.com/gradle/"
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.retrofit:retrofit:1.9.0'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    implementation 'com.squareup.okhttp:okhttp:2.0.0'
+    implementation 'com.google.android.gms:play-services:9.4.0'
+    //    compile 'com.google.android.gms:play-services:6.+'
+    implementation 'org.jsoup:jsoup:1.10.1'
+    implementation 'com.android.volley:volley:1.0.0'
+    implementation 'com.splunk.mint:mint:4.4.0'
+    implementation 'com.google.android.gms:play-services-ads:9.4.0'
+    implementation 'com.google.android.gms:play-services-auth:9.4.0'
+    implementation 'com.google.android.gms:play-services-gcm:9.4.0'
+    implementation 'com.google.android.gms:play-services:9.4.0'
+    implementation 'com.google.firebase:firebase-messaging:9.4.0'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'com.github.satyan:sugar:1.4'
+    implementation 'com.android.support:appcompat-v7:25.1.0'
+    implementation 'com.android.support:design:25.1.0'
+    implementation 'com.android.support:support-v4:25.1.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

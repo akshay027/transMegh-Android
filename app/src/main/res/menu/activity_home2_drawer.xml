@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mybus"
+        android:icon="@drawable/ic_directions_bus_black_24dp"
+        android:showAsAction="always"
+        />
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:showAsAction="always"
+       />
+    <item
+        android:id="@+id/parent"
+        android:icon="@drawable/ic_students"
+        android:showAsAction="always"
+        />
+</menu>

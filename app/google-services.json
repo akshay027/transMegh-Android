@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "902760490008",
+    "firebase_url": "https://transmegh-8d0d6.firebaseio.com",
+    "project_id": "transmegh-8d0d6",
+    "storage_bucket": "transmegh-8d0d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:902760490008:android:f77522338d3b94a2",
+        "android_client_info": {
+          "package_name": "com.exalogic.transmegh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "902760490008-drioov2uvhn4nnl4bnb9k6p38slk7dj9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcfoQuXx_PpjWCwEcKjePptPnp38d2vW0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:context=".Activities.LoginActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.exalogic.transmegh.Activities.TripActivity" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="right">
+
+            <ImageView
+                android:id="@+id/mess"
+                android:layout_width="42dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/mess"
+                android:scaleType="center"
+                android:layout_margin="16dp"
+                android:background="@drawable/circle"
+                android:src="@drawable/ic_message" />
+
+
+            <ImageView
+                android:id="@+id/ivNav"
+                android:layout_width="42dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/mess"
+                android:layout_margin="16dp"
+                android:scaleType="center"
+                android:background="@drawable/circle1"
+                android:src="@drawable/ic_navi" />
+
+            <ImageView
+                android:id="@+id/ivatt"
+                android:layout_width="42dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/mess"
+                android:scaleType="center"
+                android:layout_margin="16dp"
+                android:background="@drawable/circle3"
+                android:src="@drawable/ic_att" />
+
+            <ImageView
+                android:id="@+id/ivstoptri"
+                android:layout_width="42dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/mess"
+                android:scaleType="center"
+                android:layout_margin="16dp"
+                android:background="@drawable/circle2"
+                android:src="@drawable/ic_stoop" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="bottom">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvNextStop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Start Trip"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvNavTo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:alpha="0.8"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnTripStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="0.5"
+                android:background="#2aac7c"
+                android:gravity="center"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:text="Start Trip"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
